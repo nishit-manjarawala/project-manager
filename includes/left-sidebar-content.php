@@ -1,3 +1,9 @@
+<div id="content" class="pmd-content inner-page">
+	<!--tab start-->
+	<div class="container-fluid full-width-container blank">
+		
+	</div><!-- tab end -->	
+</div><!-- content area end -->
 <!-- Sidebar Starts -->
 <div class="pmd-sidebar-overlay"></div>
 
@@ -9,13 +15,19 @@
 		<li class="dropdown pmd-dropdown pmd-user-info visible-xs visible-md visible-sm visible-lg">
 			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" aria-expandedhref="javascript:void(0);">
 				<div class="media-left">
-					<img src="<?= get_template_directory_uri() ?>/themes/images/user-icon.png" alt="New User">
+					<img src="<?=  get_avatar_url(get_current_user_id(),array("size"=>35 )) ?>" alt="New User">
 				</div>
-				<div class="media-body media-middle">Propeller Admin</div>
+				<div class="media-body media-middle">
+				<?php
+				$user = wp_get_current_user();
+				$role = ( array ) $user->roles;
+				echo $role[0];
+				?>
+				</div>
 				<div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
 			</a>
 			<ul class="dropdown-menu">
-				<li><a href="login.html">Logout</a></li>
+				<li><a href="<?php echo wp_logout_url();?>">Logout</a></li>
 			</ul>
 		</li><!-- End user info -->
 		

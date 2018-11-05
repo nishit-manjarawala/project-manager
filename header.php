@@ -7,13 +7,15 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<?php get_template_part('includes/header-top','content')?>
-<?php get_template_part('includes/left-sidebar-content','content')?>
+<body <?php body_class(); ?> >
+<?php
+	if (!is_404()) {
+		if(is_user_logged_in()){
+			get_template_part('includes/header-top','content');
+			get_template_part('includes/left-sidebar-content','content');
+		}else{
+			get_template_part('includes/login-content','content');
+		}
+	}
+?>
 <!--content area start-->
-<div id="content" class="pmd-content inner-page">
-	<!--tab start-->
-	<div class="container-fluid full-width-container blank">
-		
-	</div><!-- tab end -->	
-</div><!-- content area end -->

@@ -93,7 +93,7 @@
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<a href="javascript:void(0);" data-target="basicSidebar" data-placement="left" data-position="slidepush" is-open="true" is-open-width="1200" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons md-light">menu</i></a>	
-		  <a href="index.html" class="navbar-brand">
+		  <a href="<?= get_home_url() ?>" class="navbar-brand">
 		  	<svg version="1.1" x="0px" y="0px"
 	 width="174.16px" height="48px" viewBox="0 0 174.16 48" enable-background="new 0 0 174.16 48" xml:space="preserve">
 <g>

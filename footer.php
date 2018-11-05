@@ -1,6 +1,10 @@
 <?php wp_footer(); ?>
 <!-- Footer Starts -->
+<?php
+if(is_user_logged_in()){
+?>
 <footer class="admin-footer">
+
  <div class="container-fluid">
  	<ul class="list-unstyled list-inline">
 	 	<li>
@@ -35,7 +39,11 @@
         </li>
     </ul>
  </div>
+
 </footer>
+<?php
+}
+?>
 <!-- Footer Ends -->
 </body>
 </html>
